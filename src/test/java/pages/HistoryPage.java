@@ -1,3 +1,5 @@
+package pages;
+
 public class HistoryPage {
 
     public void showHistory(){
