@@ -61,10 +61,10 @@
     </dependencies>
 
     <properties>
-        <java.version>1.11</java.version>
+        <java.version>1.8</java.version>
         <maven.compiler.version>3.8.1</maven.compiler.version>
-        <maven.compiler.source>1.11</maven.compiler.source>
-        <maven.compiler.target>1.11</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <build>
@@ -80,5 +80,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

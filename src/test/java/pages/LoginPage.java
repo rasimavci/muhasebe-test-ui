@@ -11,7 +11,7 @@ public class LoginPage {
     @Test
     public static void successfulLoginThenLogout() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ozdileto\\Desktop\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromeDriver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -72,7 +72,7 @@ public class LoginPage {
     @Test
     public void invalidUsernameValidPassword() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ozdileto\\Desktop\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromeDriver/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
