@@ -17,6 +17,150 @@ public class Values {
     static String email = "rasim3@gmail.com";
     static String password = "1234";
 
+    static String loginURL = "https://muhasebe-deploy.herokuapp.com/login";
+    static String usernameXpath = "//*[@formcontrolname='username']";
+    static String passwordXpath = "//*[@formcontrolname='password']";
+    static String loginButtonXpath = "//*[@class='btn btn-primary my-4']";
+    static String menuButtonXpath = "//*[@class='media align-items-center']";
+    static String logoutButtonXpath = "//span[text() = 'Çıkış Yap']";
+    static String validUsername = "360";
+    static String validPassword = "1234";
+    static String invalidUsername = "1111111";
+    static String invalidPassword = "12345";
+    static String chromeDriver = "webdriver.chrome.driver";
+    static String chromeDriverPath = "chromeDriver/chromedriver.exe";
+    static String urlEndsWithLoginMessage = "\nUrl ends with 'login'.\n";
+    static String urlDoesNotEndsWithLoginMessage = "Url does not ends with 'login'!";
+    static String successfulLoginMessage = "Login successful.";
+    static String loginErrorMessage = "Login error!";
+
+    public static String getLoginURL() {
+        return loginURL;
+    }
+
+    public static void setLoginURL(String loginURL) {
+        Values.loginURL = loginURL;
+    }
+
+    public static String getUsernameXpath() {
+        return usernameXpath;
+    }
+
+    public static void setUsernameXpath(String usernameXpath) {
+        Values.usernameXpath = usernameXpath;
+    }
+
+    public static String getPasswordXpath() {
+        return passwordXpath;
+    }
+
+    public static void setPasswordXpath(String passwordXpath) {
+        Values.passwordXpath = passwordXpath;
+    }
+
+    public static String getLoginButtonXpath() {
+        return loginButtonXpath;
+    }
+
+    public static void setLoginButtonXpath(String loginButtonXpath) {
+        Values.loginButtonXpath = loginButtonXpath;
+    }
+
+    public static String getMenuButtonXpath() {
+        return menuButtonXpath;
+    }
+
+    public static void setMenuButtonXpath(String menuButtonXpath) {
+        Values.menuButtonXpath = menuButtonXpath;
+    }
+
+    public static String getLogoutButtonXpath() {
+        return logoutButtonXpath;
+    }
+
+    public static void setLogoutButtonXpath(String logoutButtonXpath) {
+        Values.logoutButtonXpath = logoutButtonXpath;
+    }
+
+    public static String getValidUsername() {
+        return validUsername;
+    }
+
+    public static void setValidUsername(String validUsername) {
+        Values.validUsername = validUsername;
+    }
+
+    public static String getValidPassword() {
+        return validPassword;
+    }
+
+    public static void setValidPassword(String validPassword) {
+        Values.validPassword = validPassword;
+    }
+
+    public static String getInvalidUsername() {
+        return invalidUsername;
+    }
+
+    public static void setInvalidUsername(String invalidUsername) {
+        Values.invalidUsername = invalidUsername;
+    }
+
+    public static String getInvalidPassword() {
+        return invalidPassword;
+    }
+
+    public static void setInvalidPassword(String invalidPassword) {
+        Values.invalidPassword = invalidPassword;
+    }
+
+    public static String getChromeDriver() {
+        return chromeDriver;
+    }
+
+    public static void setChromeDriver(String chromeDriver) {
+        Values.chromeDriver = chromeDriver;
+    }
+
+    public static String getChromeDriverPath() {
+        return chromeDriverPath;
+    }
+
+    public static void setChromeDriverPath(String chromeDriverPath) {
+        Values.chromeDriverPath = chromeDriverPath;
+    }
+
+    public static String getUrlEndsWithLoginMessage() {
+        return urlEndsWithLoginMessage;
+    }
+
+    public static void setUrlEndsWithLoginMessage(String urlEndsWithLoginMessage) {
+        Values.urlEndsWithLoginMessage = urlEndsWithLoginMessage;
+    }
+
+    public static String getUrlDoesNotEndsWithLoginMessage() {
+        return urlDoesNotEndsWithLoginMessage;
+    }
+
+    public static void setUrlDoesNotEndsWithLoginMessage(String urlDoesNotEndsWithLoginMessage) {
+        Values.urlDoesNotEndsWithLoginMessage = urlDoesNotEndsWithLoginMessage;
+    }
+
+    public static String getSuccessfulLoginMessage() {
+        return successfulLoginMessage;
+    }
+
+    public static void setSuccessfulLoginMessage(String successfulLoginMessage) {
+        Values.successfulLoginMessage = successfulLoginMessage;
+    }
+
+    public static String getLoginErrorMessage() {
+        return loginErrorMessage;
+    }
+
+    public static void setLoginErrorMessage(String loginErrorMessage) {
+        Values.loginErrorMessage = loginErrorMessage;
+    }
 
     public static Random getRandom() {
         return random;

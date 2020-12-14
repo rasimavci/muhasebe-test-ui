@@ -39,7 +39,7 @@ public class WebUtil {
 
         //This path may not work, not tested
         //System.setProperty("webdriver.chrome.driver", "../../../../../chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\ozdileto\\Desktop\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "chromeDriver/chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
 
