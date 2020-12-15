@@ -9,8 +9,5 @@
         <module name="muhasebe-test-ui" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="muhasebe-test-ui" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,29 +1,28 @@
 package utils;
 
-import utils.AjaxWaiter;
-
 import java.util.Random;
 
 public class Values {
+////////////register//////////////////////////////////////////
     static Random random = new Random();
-    static int random_id = random.nextInt(10000);
+    static int random_id = random.nextInt(5);
     static String randomid1 = String.valueOf(random_id);
-
     static String fullname = "rasim1234";
     static String VKN = randomid1;
+    static String defterID = "7840266351";
     static String company = "Ronwell";
     static String phone = "05624521245";
     static String address = "Edirne";
     static String email = "rasim3@gmail.com";
     static String password = "1234";
-
+///////login////////////////////////////////////////////////
     static String loginURL = "https://muhasebe-deploy.herokuapp.com/login";
     static String usernameXpath = "//*[@formcontrolname='username']";
     static String passwordXpath = "//*[@formcontrolname='password']";
     static String loginButtonXpath = "//*[@class='btn btn-primary my-4']";
     static String menuButtonXpath = "//*[@class='media align-items-center']";
     static String logoutButtonXpath = "//span[text() = 'Çıkış Yap']";
-    static String validUsername = "360";
+    static String validUsername = "9000068418";
     static String validPassword = "1234";
     static String invalidUsername = "1111111";
     static String invalidPassword = "12345";
@@ -33,6 +32,29 @@ public class Values {
     static String urlDoesNotEndsWithLoginMessage = "Url does not ends with 'login'!";
     static String successfulLoginMessage = "Login successful.";
     static String loginErrorMessage = "Login error!";
+
+    static String eDefterXpath = "(//*[@type='file'])[1]";
+    static String eFaturaXpath = "(//*[@type='file'])[2]";
+
+    public static String geteDefterXpath() {
+        return eDefterXpath;
+    }
+
+    public static void seteDefterXpath(String eDefterXpath) {
+        Values.eDefterXpath = eDefterXpath;
+    }
+
+    public static String geteFaturaXpath() {
+        return eFaturaXpath;
+    }
+
+    public static void seteFaturaXpath(String eFaturaXpath) {
+        Values.eFaturaXpath = eFaturaXpath;
+    }
+
+    public static void setMytoken(String mytoken) {
+        mytoken = mytoken;
+    }
 
     public static String getLoginURL() {
         return loginURL;
