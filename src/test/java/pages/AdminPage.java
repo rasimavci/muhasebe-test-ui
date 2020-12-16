@@ -1,15 +1,15 @@
 package pages;
 
-import org.openqa.selenium.*;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 import utils.Values;
-
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginPage {
+public class AdminPage {
 
     @Test
     public static void successfulLoginThenLogout() throws InterruptedException {
@@ -19,9 +19,9 @@ public class LoginPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        driver.get(Values.getLoginURL());
+        driver.get("https://muhasebe-deploy.herokuapp.com/admin");
 
-        if(driver.getCurrentUrl().endsWith("login")){
+        if(driver.getCurrentUrl().endsWith("admin")){
             System.out.println(Values.getUrlEndsWithLoginMessage());
         }
         else{
@@ -33,7 +33,7 @@ public class LoginPage {
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
 
-        if(driver.getCurrentUrl().endsWith("tables")){
+        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else{
@@ -54,9 +54,9 @@ public class LoginPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        driver.get(Values.getLoginURL());
+        driver.get("https://muhasebe-deploy.herokuapp.com/admin");
 
-        if(driver.getCurrentUrl().endsWith("login")){
+        if(driver.getCurrentUrl().endsWith("admin")){
             System.out.println(Values.getUrlEndsWithLoginMessage());
         }
         else{
@@ -84,9 +84,9 @@ public class LoginPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        driver.get(Values.getLoginURL());
+        driver.get("https://muhasebe-deploy.herokuapp.com/admin");
 
-        if(driver.getCurrentUrl().endsWith("login")){
+        if(driver.getCurrentUrl().endsWith("admin")){
             System.out.println(Values.getUrlEndsWithLoginMessage());
         }
         else{
@@ -114,9 +114,9 @@ public class LoginPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-        driver.get(Values.getLoginURL());
+        driver.get("https://muhasebe-deploy.herokuapp.com/admin");
 
-        if(driver.getCurrentUrl().endsWith("login")){
+        if(driver.getCurrentUrl().endsWith("admin")){
             System.out.println(Values.getUrlEndsWithLoginMessage());
         }
         else{

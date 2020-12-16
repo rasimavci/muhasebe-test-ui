@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import utils.Values;
 
+import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
 public class EfaturaAuditPage {
@@ -29,10 +30,12 @@ public class EfaturaAuditPage {
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
 
+        Thread.sleep(1500);
+
         driver.findElement(By.xpath(Values.getUsernameXpath())).sendKeys("7840266351");//9000068418
         driver.findElement(By.xpath(Values.getPasswordXpath())).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         if(driver.getCurrentUrl().endsWith("tables")){
             System.out.println(Values.getSuccessfulLoginMessage());
@@ -40,6 +43,8 @@ public class EfaturaAuditPage {
         else{
             System.out.println(Values.getLoginErrorMessage());
         }
+
+        Thread.sleep(1500);
 
         WebElement uploadDefter = driver.findElement(By.xpath(Values.geteDefterXpath()));
         uploadDefter.sendKeys("C:\\Users\\ozdileto\\Desktop\\E-Defteri.xml");

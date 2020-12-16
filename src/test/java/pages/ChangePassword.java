@@ -31,7 +31,7 @@ public class ChangePassword {
         driver.findElement(By.xpath(Values.getUsernameXpath())).sendKeys(Values.getValidUsername());
         driver.findElement(By.xpath(Values.getPasswordXpath())).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         if(driver.getCurrentUrl().endsWith("tables")){
             System.out.println(Values.getSuccessfulLoginMessage());
@@ -40,11 +40,11 @@ public class ChangePassword {
             System.out.println(Values.getLoginErrorMessage());
         }
 
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         driver.findElement(By.xpath(Values.getChangePassXpath())).click();
 
@@ -53,20 +53,23 @@ public class ChangePassword {
         driver.findElement(By.xpath("//*[@id='newPass2']")).sendKeys("abc123");
         driver.findElement(By.xpath("//*[text()='Şifremi Değiştir']")).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         Alert alert = driver.switchTo().alert();
         String text = alert.getText();
         alert.accept();
-        System.out.println("Şifre değiştirme" + text + "!");
+        System.out.println("Şifre değiştirme " + text + "!");
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+        driver.close();
+
+
 
     }
 
     @Test(priority = 2)
-    public void changePasstoOldOne() throws InterruptedException {
+    public void changePassToOldOne() throws InterruptedException {
 
         System.setProperty(Values.getChromeDriver(), Values.getChromeDriverPath());
         WebDriver driver = new ChromeDriver();
@@ -85,7 +88,7 @@ public class ChangePassword {
         driver.findElement(By.xpath(Values.getUsernameXpath())).sendKeys(Values.getValidUsername());
         driver.findElement(By.xpath(Values.getPasswordXpath())).sendKeys("abc123");
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         if(driver.getCurrentUrl().endsWith("tables")){
             System.out.println(Values.getSuccessfulLoginMessage());
@@ -94,11 +97,11 @@ public class ChangePassword {
             System.out.println(Values.getLoginErrorMessage());
         }
 
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         driver.findElement(By.xpath(Values.getChangePassXpath())).click();
 
@@ -107,18 +110,16 @@ public class ChangePassword {
         driver.findElement(By.xpath("//*[@id='newPass2']")).sendKeys("1234");
         driver.findElement(By.xpath("//*[text()='Şifremi Değiştir']")).click();
 
-        Thread.sleep(3000);
+        Thread.sleep(1500);
 
         Alert alert = driver.switchTo().alert();
         String text = alert.getText();
         alert.accept();
-        System.out.println("Şifre değiştirme" + text + "!");
+        System.out.println("Şifre değiştirme " + text + "!");
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
-        Thread.sleep(1200);
+        Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
-
-
 
     }
 }

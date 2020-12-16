@@ -17,7 +17,7 @@ public class Values {
     static String password = "1234";
 ///////login////////////////////////////////////////////////
     static String loginURL = "https://muhasebe-deploy.herokuapp.com/login";
-    static String usernameXpath = "//*[@formcontrolname='username']";
+    static String usernameXpath = "//*[@formcontrolname='vkn']";
     static String passwordXpath = "//*[@formcontrolname='password']";
     static String loginButtonXpath = "//*[@class='btn btn-primary my-4']";
     static String menuButtonXpath = "//*[@class='media align-items-center']";
@@ -33,6 +33,9 @@ public class Values {
     static String successfulLoginMessage = "Login successful.";
     static String loginErrorMessage = "Login error!";
     static String changePassXpath = "//*[text()='Şifre Değiştir']";
+    static String eDefterXpath = "//input[@name='file2']";
+    static String eFaturaXpath = "//input[@name='file1']";
+
 
 
 
@@ -44,9 +47,6 @@ public class Values {
     public static void setChangePassXpath(String changePassXpath) {
         Values.changePassXpath = changePassXpath;
     }
-
-    static String eDefterXpath = "(//*[@type='file'])[1]";
-    static String eFaturaXpath = "(//*[@type='file'])[2]";
 
     public static String geteDefterXpath() {
         return eDefterXpath;
