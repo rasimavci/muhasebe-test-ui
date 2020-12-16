@@ -10,6 +10,7 @@ import utils.Values;
 import java.util.concurrent.TimeUnit;
 
 public class AdminPage {
+    public static String xpath = "//input[@formcontrolname=";
 
     @Test
     public static void successfulLoginThenLogout() throws InterruptedException {
@@ -18,6 +19,7 @@ public class AdminPage {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
+
 
         driver.get("https://muhasebe-deploy.herokuapp.com/admin");
 
@@ -28,8 +30,8 @@ public class AdminPage {
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
 
-        driver.findElement(By.xpath(Values.getUsernameXpath())).sendKeys(Values.getValidUsername());
-        driver.findElement(By.xpath(Values.getPasswordXpath())).sendKeys(Values.getValidPassword());
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys(Values.getValidUsername());
+        driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
 
@@ -63,8 +65,8 @@ public class AdminPage {
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
 
-        driver.findElement(By.xpath(Values.getUsernameXpath())).sendKeys(Values.getValidUsername());
-        driver.findElement(By.xpath(Values.getPasswordXpath())).sendKeys(Values.getInvalidPassword());
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys(Values.getValidUsername());
+        driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getInvalidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
 
@@ -93,8 +95,8 @@ public class AdminPage {
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
 
-        driver.findElement(By.xpath(Values.getUsernameXpath())).sendKeys(Values.getInvalidUsername());
-        driver.findElement(By.xpath(Values.getPasswordXpath())).sendKeys(Values.getValidPassword());
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys(Values.getInvalidUsername());
+        driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
 
@@ -123,8 +125,8 @@ public class AdminPage {
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
 
-        driver.findElement(By.xpath(Values.getUsernameXpath())).sendKeys(Values.getInvalidUsername());
-        driver.findElement(By.xpath(Values.getPasswordXpath())).sendKeys(Values.getInvalidPassword());
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys(Values.getInvalidUsername());
+        driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getInvalidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
 
