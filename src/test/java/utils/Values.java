@@ -5,7 +5,7 @@ import java.util.Random;
 public class Values {
 ////////////register//////////////////////////////////////////
     static Random random = new Random();
-    static int random_id = random.nextInt(5);
+    static int random_id = random.nextInt(10);
     static String randomid1 = String.valueOf(random_id);
     static String fullname = "rasim1234";
     static String VKN = randomid1;
@@ -33,6 +33,9 @@ public class Values {
     static String successfulLoginMessage = "Login successful.";
     static String loginErrorMessage = "Login error!";
     static String changePassXpath = "//*[text()='Şifre Değiştir']";
+
+
+
 
     public static String getChangePassXpath() {
         return changePassXpath;

@@ -115,7 +115,10 @@ public class ChangePassword {
         System.out.println("Şifre değiştirme" + text + "!");
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
+        Thread.sleep(1200);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+
 
     }
 }
