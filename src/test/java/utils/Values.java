@@ -22,7 +22,7 @@ public class Values {
     static String loginButtonXpath = "//*[@class='btn btn-primary my-4']";
     static String menuButtonXpath = "//*[@class='media align-items-center']";
     static String logoutButtonXpath = "//span[text() = 'Çıkış Yap']";
-    static String validUsername = "9000068418";
+    static String validUsername = "7840266351";
     static String validPassword = "1234";
     static String invalidUsername = "1111111";
     static String invalidPassword = "12345";
@@ -32,6 +32,15 @@ public class Values {
     static String urlDoesNotEndsWithLoginMessage = "Url does not ends with 'login'!";
     static String successfulLoginMessage = "Login successful.";
     static String loginErrorMessage = "Login error!";
+    static String changePassXpath = "//*[text()='Şifre Değiştir']";
+
+    public static String getChangePassXpath() {
+        return changePassXpath;
+    }
+
+    public static void setChangePassXpath(String changePassXpath) {
+        Values.changePassXpath = changePassXpath;
+    }
 
     static String eDefterXpath = "(//*[@type='file'])[1]";
     static String eFaturaXpath = "(//*[@type='file'])[2]";
