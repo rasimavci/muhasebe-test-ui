@@ -58,7 +58,10 @@ public class HistoryPage {
         Thread.sleep(1500);
         driver.findElement(By.xpath("//*[@class='btn btn-primary mt-4']")).click();
 
-        driver.get("https://muhasebe-deploy.herokuapp.com/history");
+        Thread.sleep(3000);
+
+        driver.findElement(By.xpath("(//*[@class='nav-link'])[3]")).click();
+        //driver.get("https://muhasebe-deploy.herokuapp.com/history");
 
         driver.findElement(By.xpath("(//*[@class='btn btn-primary mt4'])[1]")).click();
 
