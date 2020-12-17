@@ -62,18 +62,45 @@ public class HistoryPage {
         Thread.sleep(1500);
         driver.findElement(By.xpath("//*[@class='btn btn-primary mt-4']")).click();
 
+        Thread.sleep(4000);
+
+        Boolean Display2 = driver.findElement(By.xpath("//table[@style='width: 100%;']")).isDisplayed();
+
+        if(Display2==true) {
+            System.out.println("Denetim raporu görüntülendi :" + Display2);
+        }
+        else{
+            System.out.println("Denetim raporu görüntülenemedi :" + Display2);
+        }
+
         Thread.sleep(3000);
 
-        driver.findElement(By.xpath("(//*[@class='nav-link'])[3]")).click();
-        //driver.get("https://muhasebe-deploy.herokuapp.com/history");
+        //driver.findElement(By.xpath("(//*[@class='nav-link'])[3]")).click();
+        driver.get("https://muhasebe-deploy.herokuapp.com/history");
+
+        Thread.sleep(1500);
 
         driver.findElement(By.xpath("(//*[@class='btn btn-primary mt4'])[1]")).click();
 
         Thread.sleep(2000);
 
+        Boolean Display = driver.findElement(By.xpath("//table[@style='width: 100%;']")).isDisplayed();
+
+        if(Display2==true) {
+            System.out.println("Fatura ve defter arasındaki tutar uyuşmazlıkları görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Fatura ve defter arasındaki tutar uyuşmazlıkları görüntülenemedi :" + Display);
+        }
+
+        Thread.sleep(2000);
+
+        driver.findElement(By.xpath("(//*[@class='btn btn-primary mt4'])[1]")).click();
+
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+        driver.close();
 
     }
 
@@ -141,10 +168,6 @@ public class HistoryPage {
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
-
-
-
-
 
     }
 }
