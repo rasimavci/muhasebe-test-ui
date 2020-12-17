@@ -67,10 +67,13 @@ public class RegisterPage {
         Thread.sleep(1200);
 
         driver.findElement(By.xpath("//button[@class='btn btn-primary mt-4']")).click();
+        Thread.sleep(1200);
 
-        driver.findElement(By.xpath("//li[@placement='bottom-right']")).click();
-        Thread.sleep(1500);
-        driver.findElement(By.linkText("Çıkış Yap")).click();
+        Alert alert = driver.switchTo().alert();
+        String text = alert.getText();
+        alert.accept();
+        System.out.println(text + "!");
+        Thread.sleep(1200);
 
 
     }

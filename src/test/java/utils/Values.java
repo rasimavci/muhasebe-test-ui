@@ -5,7 +5,7 @@ import java.util.Random;
 public class Values {
 ////////////register//////////////////////////////////////////
     static Random random = new Random();
-    static int random_id = random.nextInt(10);
+    static int random_id = random.nextInt(20);
     static String randomid1 = String.valueOf(random_id);
     static String fullname = "rasim1234";
     static String VKN = randomid1;
