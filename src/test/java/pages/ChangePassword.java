@@ -64,8 +64,6 @@ public class ChangePassword {
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
         driver.close();
 
-
-
     }
 
     @Test(priority = 2)

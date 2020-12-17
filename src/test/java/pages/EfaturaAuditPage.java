@@ -1,14 +1,11 @@
 package pages;
 
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import utils.Values;
-
-import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
 public class EfaturaAuditPage {
@@ -30,8 +27,6 @@ public class EfaturaAuditPage {
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
 
-        Thread.sleep(1500);
-
         driver.findElement(By.xpath(Values.getUsernameXpath())).sendKeys("7840266351");//9000068418
         driver.findElement(By.xpath(Values.getPasswordXpath())).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
@@ -51,6 +46,17 @@ public class EfaturaAuditPage {
 
         WebElement uploadFatura = driver.findElement(By.xpath(Values.geteFaturaXpath()));
         uploadFatura.sendKeys("C:\\Users\\ozdileto\\Desktop\\gelenler.zip");
+
+        driver.findElement(By.xpath("(//*[@value='Gider Faturası'])[1]")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("(//*[@value='Gider Faturası'])[2]")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//*[@class='btn btn-primary mt-4']")).click();
+
+
+        driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
 
     }
 }

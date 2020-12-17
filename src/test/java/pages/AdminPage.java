@@ -20,7 +20,6 @@ public class AdminPage {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
-
         driver.get("https://muhasebe-deploy.herokuapp.com/admin");
 
         if(driver.getCurrentUrl().endsWith("admin")){
