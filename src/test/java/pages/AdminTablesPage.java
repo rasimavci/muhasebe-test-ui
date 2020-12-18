@@ -5,6 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import utils.Values;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class AdminTablesPage {
@@ -117,6 +120,209 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+        driver.close();
+
+    }
+
+    @Test(priority = 3)
+    public static void changeAddress() throws InterruptedException {
+        System.setProperty(Values.getChromeDriver(), Values.getChromeDriverPath());
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.get("https://muhasebe-deploy.herokuapp.com/admin");
+        if(driver.getCurrentUrl().endsWith("admin"))
+        {
+            System.out.println(Values.getUrlEndsWithLoginMessage());
+        }
+        else{
+            System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
+        }
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("7840266351");
+        driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
+        driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
+            System.out.println(Values.getSuccessfulLoginMessage());
+        }
+        else{
+            System.out.println(Values.getLoginErrorMessage());
+        }
+        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        Thread.sleep(1200);
+        driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
+        Thread.sleep(1200);
+        driver.findElement(By.xpath("//select[@class='btn btn-outline-primary ng-untouched ng-pristine ng-valid']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@value='addres']")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).clear();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).sendKeys("istanbul");
+        Thread.sleep(1500);
+
+        driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'istanbul')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen adres kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen adres kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
+
+        driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
+
+        driver.close();
+
+    }
+
+    @Test(priority = 4)
+    public static void changeEmail() throws InterruptedException {
+        System.setProperty(Values.getChromeDriver(), Values.getChromeDriverPath());
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.get("https://muhasebe-deploy.herokuapp.com/admin");
+        if(driver.getCurrentUrl().endsWith("admin"))
+        {
+            System.out.println(Values.getUrlEndsWithLoginMessage());
+        }
+        else{
+            System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
+        }
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("7840266351");
+        driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
+        driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
+            System.out.println(Values.getSuccessfulLoginMessage());
+        }
+        else{
+            System.out.println(Values.getLoginErrorMessage());
+        }
+        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        Thread.sleep(1200);
+        driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
+        Thread.sleep(1200);
+        driver.findElement(By.xpath("//select[@class='btn btn-outline-primary ng-untouched ng-pristine ng-valid']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@value='Email']")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).clear();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).sendKeys("fatih123@gmail.com");
+        Thread.sleep(1500);
+
+        driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'fatih123@gmail.com')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen e-mail kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen e-mail kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
+
+        driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
+
+        driver.close();
+
+    }
+
+    @Test(priority = 5)
+    public static void changeActiveUntil() throws InterruptedException {
+        System.setProperty(Values.getChromeDriver(), Values.getChromeDriverPath());
+        WebDriver driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+        driver.get("https://muhasebe-deploy.herokuapp.com/admin");
+        if(driver.getCurrentUrl().endsWith("admin"))
+        {
+            System.out.println(Values.getUrlEndsWithLoginMessage());
+        }
+        else{
+            System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
+        }
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("7840266351");
+        driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
+        driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
+            System.out.println(Values.getSuccessfulLoginMessage());
+        }
+        else{
+            System.out.println(Values.getLoginErrorMessage());
+        }
+        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        Thread.sleep(1200);
+        driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
+        Thread.sleep(1200);
+        driver.findElement(By.xpath("//select[@class='btn btn-outline-primary ng-untouched ng-pristine ng-valid']")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//*[@value='activeuntil']")).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).clear();
+        Thread.sleep(1500);
+
+        LocalDate date = LocalDate.now().plusYears(1);
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+        System.out.println("Üyelik tarihi bir yıl uzatıldı. Yeni son geçerlilik tarihi: "+date.format(formatter));
+        DateTimeFormatter formatterForTable = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
+
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).sendKeys(date.format(formatter));
+        Thread.sleep(1500);
+
+        driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'"+date.format(formatterForTable)+"')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen geçerlilik tarihi kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen geçerlilik tarihi kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
+
+        driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
+        Thread.sleep(1500);
+        driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
+
         driver.close();
 
     }
