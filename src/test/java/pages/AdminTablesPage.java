@@ -25,7 +25,7 @@ public class AdminTablesPage {
         else{
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
-        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("9000068418");
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("7840266351");
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
@@ -63,7 +63,6 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
-        driver.close();
 
         Thread.sleep(3000);
         if(driver.getCurrentUrl().endsWith("admin")){
@@ -72,6 +71,8 @@ public class AdminTablesPage {
         else{
             System.out.println("Çıkış yapılamadı!");
         }
+
+        driver.close();
 
     }
 
@@ -106,9 +107,9 @@ public class AdminTablesPage {
         Thread.sleep(2000);
         driver.findElement(By.xpath("//*[@value='id']")).click();
         Thread.sleep(1500);
-        driver.findElement(By.xpath("form-control form-control-alternative")).clear();
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).clear();
         Thread.sleep(1500);
-        driver.findElement(By.xpath("form-control form-control-alternative")).sendKeys(Values.getValidUsername());
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).sendKeys(Values.getValidUsername());
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
