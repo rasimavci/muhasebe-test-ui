@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-    <test name="Muhasebe Tests" preserve-order="true">
+<suite name="All Test Suite">
+    <test name="C:/Users/dereay/Desktop/Muhasebe/git-projeMuhasebe/muhasebe-test">
         <classes>
             <class name="pages.RegisterPage">
+                <methods>
+                    <include name="registerLogin"/>
+                    <include name="registerInvalidPassword"/>
+                    <include name="registerInvalidUserID"/>
+                    <include name="registerMainLogin"/>
+                </methods>
             </class>
             <class name="pages.LoginPage">
+                <methods>
+                    <include name="successfulLoginThenLogout"/>
+                    <include name="validUsernameInvalidPassword"/>
+                    <include name="invalidUsernameValidPassword"/>
+                    <include name="invalidUsernameAndPassword"/>
+                </methods>
             </class>
-            <class name="pages.ManuelAuditPage">
+            <class name="pages.ChangePassword">
+                <methods>
+                    <include name="changePass"/>
+                    <include name="changePassToOldOne"/>
+                </methods>
+            </class>
+            <class name="pages.AdminPage">
+                <methods>
+                    <include name="successfulLoginThenLogout"/>
+                    <include name="validUsernameInvalidPassword"/>
+                    <include name="invalidUsernameValidPassword"/>
+                    <include name="invalidUsernameAndPassword"/>
+                </methods>
+            </class>
+            <class name="pages.EfaturaAuditPage">
+                <methods>
+                    <include name="registerThenUploadFile"/>
+                </methods>
+            </class>
+            <class name="pages.HistoryPage">
+                <methods>
+                    <include name="showHistory"/>
+                    <include name="deleteHistory"/>
+                </methods>
+            </class>
+            <class name="pages.AdminTablesPage">
+                <methods>
+                    <include name="changeID"/>
+                    <include name="restoreID"/>
+                    <include name="changeName"/>
+                    <include name="restoreName"/>
+                    <include name="changeCompany"/>
+                    <include name="restoreCompany"/>
+                    <include name="changePhoneNumber"/>
+                    <include name="restorePhoneNumber"/>
+                    <include name="changeAddress"/>
+                    <include name="changeEmail"/>
+                    <include name="changeActiveUntil"/>
+                </methods>
             </class>
         </classes>
     </test>
