@@ -55,6 +55,7 @@ public class EfaturaAuditPage {
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+        driver.close();
 
     }
 }

@@ -74,6 +74,7 @@ public class RegisterPage {
         alert.accept();
         System.out.println(text + "!");
         Thread.sleep(1200);
+        driver.close();
 
 
     }
@@ -151,6 +152,7 @@ public class RegisterPage {
             System.out.println(fail);
 
         }
+        driver.close();
 
     }
     @Test
@@ -218,6 +220,7 @@ public class RegisterPage {
         String text = alert.getText();
         alert.accept();
         System.out.println(text + "!");
+        driver.close();
 
 
     }
@@ -286,6 +289,7 @@ public class RegisterPage {
         alert.accept();
         System.out.println(text + "!");
         Thread.sleep(1500);
+        driver.close();
 
 
     }

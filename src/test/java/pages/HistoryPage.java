@@ -46,10 +46,10 @@ public class HistoryPage {
         Thread.sleep(1500);
 
         WebElement uploadDefter = driver.findElement(By.xpath(Values.geteDefterXpath()));
-        uploadDefter.sendKeys("C:\\Users\\dereay\\Desktop\\Muhasebe\\E-Defteri.xml");
+        uploadDefter.sendKeys("C:\\Users\\ozdileto\\Desktop\\E-Defteri.xml");
 
         WebElement uploadFatura = driver.findElement(By.xpath(Values.geteFaturaXpath()));
-        uploadFatura.sendKeys("C:\\Users\\dereay\\Desktop\\Muhasebe\\gelenler.zip");
+        uploadFatura.sendKeys("C:\\Users\\ozdileto\\Desktop\\gelenler.zip");
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
         jse.executeScript("window.scrollBy(0,550)");
@@ -86,7 +86,7 @@ public class HistoryPage {
 
         Boolean Display = driver.findElement(By.xpath("//table[@style='width: 100%;']")).isDisplayed();
 
-        if(Display2==true) {
+        if(Display==true) {
             System.out.println("Fatura ve defter arasındaki tutar uyuşmazlıkları görüntülendi :" + Display);
         }
         else{
@@ -138,10 +138,10 @@ public class HistoryPage {
         Thread.sleep(1500);
 
         WebElement uploadDefter = driver.findElement(By.xpath(Values.geteDefterXpath()));
-        uploadDefter.sendKeys("C:\\Users\\dereay\\Desktop\\Muhasebe\\E-Defteri.xml");
+        uploadDefter.sendKeys("C:\\Users\\ozdileto\\Desktop\\E-Defteri.xml");
 
         WebElement uploadFatura = driver.findElement(By.xpath(Values.geteFaturaXpath()));
-        uploadFatura.sendKeys("C:\\Users\\dereay\\Desktop\\Muhasebe\\gelenler.zip");
+        uploadFatura.sendKeys("C:\\Users\\ozdileto\\Desktop\\gelenler.zip");
         Thread.sleep(1500);
 
         JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -152,7 +152,6 @@ public class HistoryPage {
         driver.findElement(By.xpath("(//*[@value='Gider Faturası'])[2]")).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath("//*[@class='btn btn-primary mt-4']")).click();
-
 
         driver.get("https://muhasebe-deploy.herokuapp.com/history");
 
@@ -168,6 +167,7 @@ public class HistoryPage {
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+        driver.close();
 
     }
 }
