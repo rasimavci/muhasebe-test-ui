@@ -57,10 +57,10 @@ public class AdminTablesPage {
         Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'9000068418')]")).isDisplayed();
 
         if(Display==true) {
-            System.out.println("Değiştirilen id kullanıcılar tablosunda görüntülendi :" + Display);
+            System.out.println("Değiştirilen ID kullanıcılar tablosunda görüntülendi :" + Display);
         }
         else{
-            System.out.println("Değiştirilen id kullanıcılar tablosunda görüntülenemedi :" + Display);
+            System.out.println("Değiştirilen ID kullanıcılar tablosunda görüntülenemedi :" + Display);
         }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
@@ -116,10 +116,28 @@ public class AdminTablesPage {
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'7840266351')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen ID kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen ID kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
         driver.close();
 
     }
@@ -160,10 +178,28 @@ public class AdminTablesPage {
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'Aysu')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen NAME kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen NAME kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
         driver.close();
 
     }
@@ -204,10 +240,28 @@ public class AdminTablesPage {
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'Tohan')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen NAME kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen NAME kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
         driver.close();
 
     }
@@ -248,10 +302,28 @@ public class AdminTablesPage {
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'Dormakaba')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen COMPANY kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen COMPANY kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
         driver.close();
 
     }
@@ -292,10 +364,28 @@ public class AdminTablesPage {
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'Ronwell')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen COMPANY kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen COMPANY kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
         driver.close();
 
     }
@@ -336,10 +426,29 @@ public class AdminTablesPage {
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'05342561545')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen PHONE NUMBER kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen PHONE NUMBER kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
+
         driver.close();
 
     }
@@ -380,10 +489,29 @@ public class AdminTablesPage {
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
+        Thread.sleep(2000);
+
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'5555555555')]")).isDisplayed();
+
+        if(Display==true) {
+            System.out.println("Değiştirilen PHONE NUMBER kullanıcılar tablosunda görüntülendi :" + Display);
+        }
+        else{
+            System.out.println("Değiştirilen PHONE NUMBER kullanıcılar tablosunda görüntülenemedi :" + Display);
+        }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
         Thread.sleep(1500);
         driver.findElement(By.xpath(Values.getLogoutButtonXpath())).click();
+
+        Thread.sleep(3000);
+        if(driver.getCurrentUrl().endsWith("admin")){
+            System.out.println("Başarıyla çıkış yapıldı.");
+        }
+        else{
+            System.out.println("Çıkış yapılamadı!");
+        }
+
         driver.close();
 
     }
@@ -431,10 +559,10 @@ public class AdminTablesPage {
         Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'istanbul')]")).isDisplayed();
 
         if(Display==true) {
-            System.out.println("Değiştirilen adres kullanıcılar tablosunda görüntülendi :" + Display);
+            System.out.println("Değiştirilen ADDRESS kullanıcılar tablosunda görüntülendi :" + Display);
         }
         else{
-            System.out.println("Değiştirilen adres kullanıcılar tablosunda görüntülenemedi :" + Display);
+            System.out.println("Değiştirilen ADDRESS kullanıcılar tablosunda görüntülenemedi :" + Display);
         }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
@@ -496,10 +624,10 @@ public class AdminTablesPage {
         Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'fatih123@gmail.com')]")).isDisplayed();
 
         if(Display==true) {
-            System.out.println("Değiştirilen e-mail kullanıcılar tablosunda görüntülendi :" + Display);
+            System.out.println("Değiştirilen EMAIL kullanıcılar tablosunda görüntülendi :" + Display);
         }
         else{
-            System.out.println("Değiştirilen e-mail kullanıcılar tablosunda görüntülenemedi :" + Display);
+            System.out.println("Değiştirilen EMAIL kullanıcılar tablosunda görüntülenemedi :" + Display);
         }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
@@ -569,10 +697,10 @@ public class AdminTablesPage {
         Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'"+date.format(formatterForTable)+"')]")).isDisplayed();
 
         if(Display==true) {
-            System.out.println("Değiştirilen geçerlilik tarihi kullanıcılar tablosunda görüntülendi :" + Display);
+            System.out.println("Değiştirilen ACTIVE UNTIL kullanıcılar tablosunda görüntülendi :" + Display);
         }
         else{
-            System.out.println("Değiştirilen geçerlilik tarihi kullanıcılar tablosunda görüntülenemedi :" + Display);
+            System.out.println("Değiştirilen ACTIVE UNTIL kullanıcılar tablosunda görüntülenemedi :" + Display);
         }
 
         driver.findElement(By.xpath(Values.getMenuButtonXpath())).click();
