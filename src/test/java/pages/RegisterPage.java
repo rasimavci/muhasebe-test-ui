@@ -8,7 +8,6 @@ import java.util.concurrent.TimeUnit;
 
 public class RegisterPage {
 
-
     @Test
     public static void registerLogin() throws InterruptedException {
 
@@ -67,7 +66,7 @@ public class RegisterPage {
         Thread.sleep(1200);
 
         driver.findElement(By.xpath("//button[@class='btn btn-primary mt-4']")).click();
-        Thread.sleep(1200);
+        Thread.sleep(3000);
 
         Alert alert = driver.switchTo().alert();
         String text = alert.getText();
@@ -75,7 +74,6 @@ public class RegisterPage {
         System.out.println(text + "!");
         Thread.sleep(1200);
         driver.close();
-
 
     }
 

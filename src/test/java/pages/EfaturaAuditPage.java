@@ -42,10 +42,10 @@ public class EfaturaAuditPage {
         Thread.sleep(1500);
 
         WebElement uploadDefter = driver.findElement(By.xpath(Values.geteDefterXpath()));
-        uploadDefter.sendKeys("C:\\Users\\dereay\\Desktop\\Muhasebe\\E-Defteri.xml");
+        uploadDefter.sendKeys("C:\\Users\\ozdileto\\Desktop\\E-Defteri.xml");
 
         WebElement uploadFatura = driver.findElement(By.xpath(Values.geteFaturaXpath()));
-        uploadFatura.sendKeys("C:\\Users\\dereay\\Desktop\\Muhasebe\\gelenler.zip");
+        uploadFatura.sendKeys("C:\\Users\\ozdileto\\Desktop\\gelenler.zip");
 
         driver.findElement(By.xpath("(//*[@value='Gider Faturası'])[1]")).click();
         Thread.sleep(1500);

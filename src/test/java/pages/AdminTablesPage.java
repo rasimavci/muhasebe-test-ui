@@ -27,17 +27,17 @@ public class AdminTablesPage {
         else{
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
-        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("7840266351");
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("9000068418");//9000068418
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
+        if(driver.getCurrentUrl().endsWith("admin-tables")){
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else{
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -47,13 +47,13 @@ public class AdminTablesPage {
         Thread.sleep(1500);
         driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).clear();
         Thread.sleep(1500);
-        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).sendKeys("9000068418");
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).sendKeys("7840266351");
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
         Thread.sleep(2000);
 
-        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'9000068418')]")).isDisplayed();
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'7840266351')]")).isDisplayed();
 
         if(Display==true) {
             System.out.println("Değiştirilen ID kullanıcılar tablosunda görüntülendi :" + Display);
@@ -91,17 +91,17 @@ public class AdminTablesPage {
         else {
             System.out.println(Values.getUrlDoesNotEndsWithLoginMessage());
         }
-        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("9000068418");
+        driver.findElement(By.xpath(xpath + "'username']")).sendKeys("7840266351");
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if (driver.getCurrentUrl().endsWith("admin-dashboard")) {
+        if (driver.getCurrentUrl().endsWith("admin-tables")) {
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else {
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -111,13 +111,13 @@ public class AdminTablesPage {
         Thread.sleep(1500);
         driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).clear();
         Thread.sleep(1500);
-        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).sendKeys(Values.getValidUsername());
+        driver.findElement(By.xpath("//*[@class='form-control form-control-alternative']")).sendKeys("9000068418");
         Thread.sleep(1500);
 
         driver.findElement(By.xpath("//button[@class='btn btn-outline-dark']")).click();
         Thread.sleep(2000);
 
-        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'7840266351')]")).isDisplayed();
+        Boolean Display = driver.findElement(By.xpath("//*[contains(text(),'9000068418')]")).isDisplayed();
 
         if(Display==true) {
             System.out.println("Değiştirilen ID kullanıcılar tablosunda görüntülendi :" + Display);
@@ -140,6 +140,7 @@ public class AdminTablesPage {
         driver.close();
 
     }
+
     @Test(priority = 3)
     public static void changeName() throws InterruptedException {
         System.setProperty(Values.getChromeDriver(), Values.getChromeDriverPath());
@@ -157,13 +158,13 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if (driver.getCurrentUrl().endsWith("admin-dashboard")) {
+        if (driver.getCurrentUrl().endsWith("admin-tables")) {
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else {
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -225,7 +226,7 @@ public class AdminTablesPage {
         else {
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -264,6 +265,7 @@ public class AdminTablesPage {
         driver.close();
 
     }
+
     @Test(priority = 5)
     public static void changeCompany() throws InterruptedException {
         System.setProperty(Values.getChromeDriver(), Values.getChromeDriverPath());
@@ -281,13 +283,13 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if (driver.getCurrentUrl().endsWith("admin-dashboard")) {
+        if (driver.getCurrentUrl().endsWith("admin-tables")) {
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else {
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -326,6 +328,7 @@ public class AdminTablesPage {
         driver.close();
 
     }
+
     @Test(priority = 6)
     public static void restoreCompany() throws InterruptedException {
         System.setProperty(Values.getChromeDriver(), Values.getChromeDriverPath());
@@ -343,13 +346,13 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if (driver.getCurrentUrl().endsWith("admin-dashboard")) {
+        if (driver.getCurrentUrl().endsWith("admin-tables")) {
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else {
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -405,13 +408,13 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if (driver.getCurrentUrl().endsWith("admin-dashboard")) {
+        if (driver.getCurrentUrl().endsWith("admin-tables")) {
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else {
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -468,13 +471,13 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if (driver.getCurrentUrl().endsWith("admin-dashboard")) {
+        if (driver.getCurrentUrl().endsWith("admin-tables")) {
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else {
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -533,13 +536,13 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
+        if(driver.getCurrentUrl().endsWith("admin-tables")){
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else{
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -598,13 +601,13 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
+        if(driver.getCurrentUrl().endsWith("admin-tables")){
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else{
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);
@@ -663,13 +666,13 @@ public class AdminTablesPage {
         driver.findElement(By.xpath(xpath + "'password']")).sendKeys(Values.getValidPassword());
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
-        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
+        if(driver.getCurrentUrl().endsWith("admin-tables")){
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else{
             System.out.println(Values.getLoginErrorMessage());
         }
-        driver.findElement(By.xpath("//a[@class='nav-link']")).click();
+        //driver.findElement(By.xpath("//a[@class='nav-link']")).click();
         Thread.sleep(1200);
         driver.findElement(By.xpath("(//button[@class='btn btn-sm btn-primary'])[1]")).click();
         Thread.sleep(1200);

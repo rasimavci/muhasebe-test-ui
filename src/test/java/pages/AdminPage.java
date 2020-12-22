@@ -35,7 +35,7 @@ public class AdminPage {
         driver.findElement(By.xpath(Values.getLoginButtonXpath())).click();
         Thread.sleep(3000);
 
-        if(driver.getCurrentUrl().endsWith("admin-dashboard")){
+        if(driver.getCurrentUrl().endsWith("admin-tables")){
             System.out.println(Values.getSuccessfulLoginMessage());
         }
         else{
