@@ -33,8 +33,8 @@ public class Values {
     static String successfulLoginMessage = "Login successful.";
     static String loginErrorMessage = "Login error!";
     static String changePassXpath = "//*[text()='Şifre Değiştir']";
-    static String eDefterXpath = "(//input[@name='file2'])[1]";
-    static String eFaturaXpath = "(//input[@name='file2'])[2]";
+    static String eDefterXpath = "//input[@name='file2']";
+    static String eFaturaXpath = "//input[@name='file1']";
 
 
 

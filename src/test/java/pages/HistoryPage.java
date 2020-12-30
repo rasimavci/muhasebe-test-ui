@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 import utils.Values;
-
 import java.util.concurrent.TimeUnit;
 
 public class HistoryPage {
